@@ -802,3 +802,6 @@ quarterly:
 snapshot:
     snapshot-master:
         bundle_url: releases.liferay.com/portal/snapshot-master/latest/liferay-portal-tomcat-master.7z
+jakarta-testing:
+    jakarta-{bundleTimestamp}:
+        bundle_url: releases.liferay.com/dxp/release-candidates/7.4.13-u999-{timestamp}.7z
