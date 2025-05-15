@@ -127,7 +127,7 @@ function build_docker_image {
 function check_release {
 	if [[ ${RELEASE_FILE_NAME} == *-dxp-* ]] || [[ ${RELEASE_FILE_NAME} == *-private* ]]
 	then
-		DOCKER_IMAGE_NAME="dxp"
+		DOCKER_IMAGE_NAME="release-candidates"
 		DOCKER_LABEL_NAME="Liferay DXP"
 	elif [[ ${RELEASE_FILE_NAME} == *-portal-* ]]
 	then

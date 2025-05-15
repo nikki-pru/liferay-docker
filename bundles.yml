@@ -706,6 +706,8 @@
     7.4.13-u132:
     7.4.13-u133:
     7.4.13-u134:
+    7.4.13-u999-4713:
+        bundle_url: releases-cdn.liferay.com/dxp/release-candidates/7.4.13-u999-1747164713/liferay-dxp-tomcat-7.4.13-u999-1747164713.7z
     7.4.13.nightly:
         bundle_url: releases-cdn.liferay.com/dxp/nightly/liferay-dxp-tomcat-7.4.13.nightly.7z
 quarterly:
@@ -802,6 +804,3 @@ quarterly:
 snapshot:
     snapshot-master:
         bundle_url: releases.liferay.com/portal/snapshot-master/latest/liferay-portal-tomcat-master.7z
-jakarta-testing:
-    jakarta-{bundleTimestamp}:
-        bundle_url: releases.liferay.com/dxp/release-candidates/7.4.13-u999-{timestamp}.7z
