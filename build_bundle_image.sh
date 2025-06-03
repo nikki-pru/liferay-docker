@@ -128,7 +128,7 @@ function build_docker_image {
 function check_release {
 	if [[ ${RELEASE_FILE_NAME} == *-dxp-* ]] || [[ ${RELEASE_FILE_NAME} == *-private* ]]
 	then
-		DOCKER_IMAGE_NAME="dxp"
+		DOCKER_IMAGE_NAME="release-candidates"
 		DOCKER_LABEL_NAME="Liferay DXP"
 	elif [[ ${RELEASE_FILE_NAME} == *-portal-* ]]
 	then
@@ -174,7 +174,7 @@ function download_file_from_github {
 }
 
 function download_trial_dxp_license {
-	if [[ ${DOCKER_IMAGE_NAME} == "dxp" ]]
+	if [[ ${DOCKER_IMAGE_NAME} == "release-candidates" ]]
 	then
 		rm -fr "${TEMP_DIR}/liferay/data/license"
 
