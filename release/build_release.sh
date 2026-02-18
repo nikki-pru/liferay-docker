@@ -177,7 +177,7 @@ function main {
 
 		if [ "$(get_release_output)" == "release-candidate" ]
 		then
-			lc_time_run add_ckeditor_license
+			# lc_time_run add_ckeditor_license
 
 			lc_time_run install_patching_tool
 
