@@ -207,12 +207,12 @@ function main {
 
 			lc_time_run generate_release_notes
 
-			lc_time_run upload_boms xanadu
+			# lc_time_run upload_boms xanadu
 		fi
 
 		lc_time_run upload_release
 
-		lc_time_run check_liferay_marketplace_products_compatibility
+		# lc_time_run check_liferay_marketplace_products_compatibility
 
 		lc_time_run trigger_ci_test_suite
 
