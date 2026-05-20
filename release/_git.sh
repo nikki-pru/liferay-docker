@@ -249,7 +249,9 @@ function update_release_tool_repository {
 
 	git reset --hard && git clean -dfx
 
-	local release_tool_sha=$(lc_get_property "${_PROJECTS_DIR}/${LIFERAY_PORTAL_REPOSITORY_NAME}/release.properties" "release.tool.sha")
+	#local release_tool_sha=$(lc_get_property "${_PROJECTS_DIR}/${LIFERAY_PORTAL_REPOSITORY_NAME}/release.properties" "release.tool.sha")
+
+	local release_tool_sha=9c1b9a645e32661ddece9e11994dbafb46c2d84b
 
 	if [ ! -n "${release_tool_sha}" ]
 	then
@@ -266,13 +268,27 @@ function update_release_tool_repository {
 		return "${LIFERAY_COMMON_EXIT_CODE_SKIPPED}"
 	fi
 
-	git fetch --force --prune upstream
+	# git fetch --force --prune upstream
 
-	git fetch --force --prune --tags upstream
+	# git fetch --force --prune --tags upstream
 
-	git checkout master
+	# git checkout master
 
-	git pull upstream master
+	# git pull upstream master
+
+	if git remote | grep -q "^amosfong$"
+	then
+		lc_log INFO "Remote 'amosfong' already exists. Skipping..."
+	else
+		lc_log INFO "Remote 'amosfong' not found. Adding it now..."
+		git remote add amosfong git@github.com:amosfong/liferay-release-tool-ee.git
+	fi
+
+	git fetch --force --prune amosfong
+
+	git fetch --force --prune --tags amosfong
+
+	git checkout master-LPD-89421
 
 	git checkout "${release_tool_sha}"
 
