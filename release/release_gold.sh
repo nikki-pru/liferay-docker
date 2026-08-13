@@ -101,7 +101,7 @@ function main {
 
 	lc_time_run promote_packages
 
-	lc_time_run tag_release
+	# lc_time_run tag_release
 
 	promote_boms xanadu
 
