@@ -128,7 +128,7 @@ function main {
 
 	lc_time_run reference_new_releases
 
-	lc_time_run update_salesforce_product_version
+	# lc_time_run update_salesforce_product_version
 
 	if [ -d "${_RELEASE_ROOT_DIR}/dev/projects" ]
 	then
